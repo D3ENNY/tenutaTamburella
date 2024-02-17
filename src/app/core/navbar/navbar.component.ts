@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import * as feather from 'feather-icons'
 
 @Component({
   selector: 'app-navbar',
@@ -9,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  ngAfterViewInit() {
+    feather.replace();
+  }
+  
 }
