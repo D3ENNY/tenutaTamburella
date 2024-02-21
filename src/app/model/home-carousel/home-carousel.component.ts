@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import feather from 'feather-icons';
+
+import { initFlowbite } from 'flowbite';
 
 
 @Component({
@@ -9,5 +12,9 @@ import { Component } from '@angular/core';
   styleUrl: './home-carousel.component.scss'
 })
 export class HomeCarouselComponent {
+
+  ngAfterViewInit(): void {
+    feather.replace();
+  }
 
 }
