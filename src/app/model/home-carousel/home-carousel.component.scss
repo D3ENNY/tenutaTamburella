@@ -1,3 +1,18 @@
 .carousel{
     height: calc(100vh - 80px); //navbaer height
+
+    .img1{
+        background-image: url("../../../assets/img/uliveto.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .img2{
+        background-image: url("../../../assets/img/uliveto2.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+    }
+
 }
