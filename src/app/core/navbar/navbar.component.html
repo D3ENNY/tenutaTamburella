@@ -1,19 +1,47 @@
-<header class="grid grid-cols-3 bg-black w-100 text-slate-200 h-20">
-    <div class="flex pl-20 h-full items-center col-span-1">
-        <!-- replace it with logo -->
-        <div class="flex rounded-full bg-slate-500 h-14 w-14 items-center justify-center">
-            Logo
-        </div>
+<!-- Desktop navbar -->
+<header id="desktop-navbar" class="flex bg-black w-full text-slate-200 h-20">
+  <div class="flex pl-20 h-full items-center">
+    <!-- replace it with logo -->
+    <div class="flex rounded-full bg-slate-500 h-14 w-14 items-center justify-center">
+      Logo
     </div>
-    <div class="col-span-2 pr-10">
-        <div class="flex h-full gap-10 justify-end items-center text-3xl">
-            <div>Home</div>
-            <div>I nostri prodotti</div>
-            <div>Azienda</div>
-            <div>Shop</div>
-            <div>contatti</div>
-            <div>lingua<i data-feather="chevron-down" class="inline"></i></div>
-            <div><i data-feather="shopping-cart"></i></div>
-        </div>
+  </div>
+
+  <div class="pr-10 w-full">
+    <div class="flex h-full gap-10 justify-end items-center text-3xl">
+      <div>Home</div>
+      <div>I nostri prodotti</div>
+      <div>Azienda</div>
+      <div>Shop</div>
+      <div>contatti</div>
+      <div>lingua<i data-feather="chevron-down" class="inline"></i></div>
+      <div><i data-feather="shopping-cart"></i></div>
     </div>
+  </div>
 </header>
+
+<!-- Mobile Navbar -->
+
+<header id="mobile-navbar" class="hidden bg-black w-full text-slate-200 h-20">
+  <div class="flex pl-20 h-full items-center">
+    <!-- replace it with logo -->
+    <div class="flex rounded-full bg-slate-500 h-14 w-14 items-center justify-center">
+      Logo
+    </div>
+  </div>
+
+  <div class="flex w-full pr-10 items-center justify-end">
+    <i data-feather="menu" class="w-8 h-8" data-drawer-target="drawer-example" data-drawer-show="drawer-example"
+      aria-controls="drawer-example"></i>
+  </div>
+</header>
+
+<!-- drawer component -->
+<div id="drawer-example"
+  class="fixed top-0 left-0 z-[60] h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-black w-[25rem]"
+  tabindex="-1" aria-labelledby="drawer-label">
+  <div class="flex h-12 p-0 justify-between">
+    <p class="text-slate-200 text-3xl">Tenuta Tamburella</p>
+    <i data-feather="x" class=" text-slate-200 w-9 h-9"data-drawer-hide="drawer-example"></i>
+  </div>
+</div>
