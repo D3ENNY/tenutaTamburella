@@ -16,3 +16,27 @@
     }
 
 }
+
+main{
+
+    @media (max-width: 1370px){
+        // certificazioni
+        div:first-child > img{
+            width: 5rem;
+            height: 5rem;
+        }
+
+        #slogan {
+            font-size: 2rem;
+            height: 6rem;
+        }
+    }
+
+    @media (max-width: 915px){
+        #slogan {
+            font-size: 1.7rem;
+            min-width: 320px;
+            height: 7.6rem;
+        }
+    }
+}
