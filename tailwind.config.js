@@ -36,7 +36,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       obsidian: '#0B1215',
-      oil: '#262626'
+      oil: '#323613'
     }),
   },
   plugins: [
