@@ -1,14 +1,48 @@
-<section class="bg-obsidian mb-10">
-    <p class="text-oil-900 uppercase text-center text-4xl pt-4">le nostre bottiglie</p>
-    <div class="flex justify-center items-center gap-20 h-full">
-        <div>
-            <img src="../../../assets/img/oilBottle.png" alt="">
-        </div>
-        <div>
-            <img src="../../../assets/img/oilBottle.png" alt="">
-        </div>
-        <div>
-            <img src="../../../assets/img/oilBottle.png" alt="">
+<ng-template #bottleTemplate let-class="class" let-array="array">
+    <div id="bottles" class="flex flex-wrap justify-center items-center gap-60 h-full" [ngClass]="class">
+        <div class="text-center" *ngFor="let bottle of array">
+            <img src="{{bottle.imagePath}}" alt="" class="brightness-75 saturate-50 drop-shadow-oil-900 w-max">
+            <p class="text-oil-200 text-2xl text-center">{{bottle.name}}</p>
         </div>
     </div>
+</ng-template>
+
+<section class="bg-obsidian mb-10 grid gap-y-10 place-items-center py-8">
+    <p class="text-oil-50 uppercase text-center text-4xl">I nostri prodotti</p>
+    @defer (on viewport) {
+        <ng-container 
+            [ngTemplateOutlet]="bottleTemplate"
+            [ngTemplateOutletContext]="{class: 'animate-slide', array: oils}">
+        </ng-container>
+    }
+    @placeholder {
+        <div>
+            <ng-container 
+                [ngTemplateOutlet]="bottleTemplate"
+                [ngTemplateOutletContext]="{array: oils}">
+            </ng-container>
+        </div>
+    }
+    <div class="container">
+        <p class="text-oil-50 uppercase text-center text-4xl">Le bottiglie</p>
+        <hr class="h-1 mb-8 mt-2 bg-oil-100 border-0">
+    </div>
+    @defer (on viewport) {
+        <ng-container 
+            [ngTemplateOutlet]="bottleTemplate"
+            [ngTemplateOutletContext]="{class: 'animate-slide', array: bottles}">
+        </ng-container>
+    }
+    @placeholder {
+        <div>
+            <ng-container 
+                [ngTemplateOutlet]="bottleTemplate"
+                [ngTemplateOutletContext]="{array: bottles}">
+            </ng-container>
+        </div>
+    }
+
+    
+
+
 </section>
