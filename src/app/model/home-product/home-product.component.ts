@@ -17,9 +17,9 @@ export class HomeProductComponent {
   ]
 
   bottles: any[] = [
-    {"imagePath": "../../../assets/img/oilBottle.png", "name": "bottiglia 250ml"},
-    {"imagePath": "../../../assets/img/oilBottle.png", "name": "bottiglia 500ml"},
-    {"imagePath": "../../../assets/img/oilBottle.png", "name": "bottiglia 750ml"},
-    {"imagePath": "../../../assets/img/oilBottle.png", "name": "latta 5l"},
+    {"imagePath": "../../../assets/img/oilBottle.png", "name": "bottiglia 250mL"},
+    {"imagePath": "../../../assets/img/oilBottle.png", "name": "bottiglia 500mL"},
+    {"imagePath": "../../../assets/img/oilBottle.png", "name": "bottiglia 750mL"},
+    {"imagePath": "../../../assets/img/oilBottle.png", "name": "latta 5L"},
   ]
 }

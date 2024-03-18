@@ -1,8 +1,8 @@
-<ng-template #bottleTemplate let-class="class" let-array="array">
-    <div id="bottles" class="flex flex-wrap justify-center items-center gap-60 h-full" [ngClass]="class">
-        <div class="text-center" *ngFor="let bottle of array">
-            <img src="{{bottle.imagePath}}" alt="" class="brightness-75 saturate-50 drop-shadow-oil-900 w-max">
-            <p class="text-oil-200 text-2xl text-center">{{bottle.name}}</p>
+<ng-template #bottleTemplate let-class="class" let-type="type" let-id="id">
+    <div id="{{id}}" class="flex flex-wrap justify-center items-center gap-60 h-full" [ngClass]="class">
+        <div class="text-center" *ngFor="let el of type">
+            <img src="{{el.imagePath}}" alt="" class="brightness-75 saturate-50 drop-shadow-oil-900 w-max">
+            <p class="text-oil-100 text-[1.7rem] text-center pt-3">{{el.name}}</p>
         </div>
     </div>
 </ng-template>
@@ -12,14 +12,14 @@
     @defer (on viewport) {
         <ng-container 
             [ngTemplateOutlet]="bottleTemplate"
-            [ngTemplateOutletContext]="{class: 'animate-slide', array: oils}">
+            [ngTemplateOutletContext]="{class: 'animate-slide', type: oils, id: 'oils'}">
         </ng-container>
     }
     @placeholder {
         <div>
             <ng-container 
                 [ngTemplateOutlet]="bottleTemplate"
-                [ngTemplateOutletContext]="{array: oils}">
+                [ngTemplateOutletContext]="{type: oils, id: 'oils'}">
             </ng-container>
         </div>
     }
@@ -30,14 +30,14 @@
     @defer (on viewport) {
         <ng-container 
             [ngTemplateOutlet]="bottleTemplate"
-            [ngTemplateOutletContext]="{class: 'animate-slide', array: bottles}">
+            [ngTemplateOutletContext]="{class: 'animate-slide', type: bottles, id: 'bottles'}">
         </ng-container>
     }
     @placeholder {
         <div>
             <ng-container 
                 [ngTemplateOutlet]="bottleTemplate"
-                [ngTemplateOutletContext]="{array: bottles}">
+                [ngTemplateOutletContext]="{type: bottles, id: 'bottles'}">
             </ng-container>
         </div>
     }
