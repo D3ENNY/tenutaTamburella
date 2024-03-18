@@ -1,14 +1,14 @@
 :root {
-    --obsidian: #0B1215;
+    --obsidian: theme(colors.obsidian);
 
-    --oil-50:  #8e7f4f;
-    --oil-100: #7a6743;
-    --oil-200: #63532f;
-    --oil-300: #5c4f2b;
-    --oil-400: #554b27;
-    --oil-500: #4e4723;
-    --oil-600: #47431f;
-    --oil-700: #403f1b;
-    --oil-800: #393b17;
-    --oil-900: #323613;
+    --oil-50:  theme(colors.oil.50);
+    --oil-100: theme(colors.oil.100);
+    --oil-200: theme(colors.oil.200);
+    --oil-300: theme(colors.oil.300);
+    --oil-400: theme(colors.oil.400);
+    --oil-500: theme(colors.oil.500);
+    --oil-600: theme(colors.oil.600);
+    --oil-700: theme(colors.oil.700);
+    --oil-800: theme(colors.oil.800);
+    --oil-900: theme(colors.oil.900);
 }
