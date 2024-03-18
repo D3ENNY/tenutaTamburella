@@ -1,9 +1,32 @@
-@media (max-width: 1170px){
-    #desktop-navbar{
-        display: none;
-    }
+@media (max-width: 1170px) {
+  #desktop-navbar {
+    display: none;
+  }
 
-    #mobile-navbar{
-        display: flex;
-    }
+  #mobile-navbar {
+    display: flex;
+  }
+}
+
+.underline-animation {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  @apply text-slate-200;
+}
+
+.underline-animation::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  transition: width 0.3s ease;
+  @apply bg-oil-300;
+}
+
+.underline-animation:hover::before {
+  width: 100%;
 }
