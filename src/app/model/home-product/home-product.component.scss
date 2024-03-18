@@ -2,12 +2,21 @@ section {
     min-height: 100vh;
     height: max-content;
 
-    @media (max-width: 640px) {
-        div#bottles{
-            gap: 2rem 7rem !important;
-            margin: 4%;
+    @media (max-width: 655px) {
+        div#bottles {
+            row-gap: 2rem;
+            margin: 0% 4%;
             align-items: stretch;
-            
+            & > div{
+                flex: 2;
+                width: fit-content;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        div#bottles {
+            gap: 2rem 7rem !important;
             & > div{
                 box-sizing: border-box;
                 flex: 1;
