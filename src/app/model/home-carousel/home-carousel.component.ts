@@ -25,6 +25,7 @@ export class HomeCarouselComponent {
 
   ngAfterViewInit(): void {
     const items: any[] = []
+
     this.carouselItems.forEach((item, index) => {
       items.push({ position: index, el: item?.nativeElement})
     })
@@ -37,6 +38,7 @@ export class HomeCarouselComponent {
         items: items,
       }
     }
+    
     const instanceOptions = {
       id: 'default-carousel',
       override: true,
