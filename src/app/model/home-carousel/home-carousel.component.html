@@ -2,7 +2,7 @@
   <!-- Carousel wrapper -->
   <div class="relative overflow-hidden h-full">
     <ng-container *ngFor="let item of carouselImage">
-      <div #carouselItem class="hidden duration-700 ease-in-out img blur-[2px]" [style.background-image]="'url('+item.URL+')'"  data-carousel-item></div>
+      <div #carouselItem class="hidden duration-700 ease-in-out img blur-[2px]" [style.background-image]="'url('+item+')'"  data-carousel-item></div>
     </ng-container>
   </div>
   <!-- photo overlay -->

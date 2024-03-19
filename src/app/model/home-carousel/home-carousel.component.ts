@@ -16,11 +16,11 @@ export class HomeCarouselComponent {
   @ViewChildren('carouselItem') carouselItems!: QueryList<ElementRef>;
 
   carouselImage: any[] = [
-    {URL: "../../../assets/img/uliveto.png", ref: "itemZeroRef"}, 
-    {URL: "../../../assets/img/uliveto2.jpeg", ref: "itemOneRef"}, 
-    {URL: "../../../assets/img/uliveto.png", ref: "itemTwoRef"},
-    {URL: "../../../assets/img/uliveto2.jpeg", ref: "itemThreeRef"}, 
-    {URL: "../../../assets/img/uliveto.png", ref: "itemFourRef"},
+    "../../../assets/img/uliveto.png",
+    "../../../assets/img/uliveto2.jpeg", 
+    "../../../assets/img/uliveto.png",
+    "../../../assets/img/uliveto2.jpeg", 
+    "../../../assets/img/uliveto.png",
   ]
 
   ngAfterViewInit(): void {
@@ -38,7 +38,7 @@ export class HomeCarouselComponent {
         items: items,
       }
     }
-    
+
     const instanceOptions = {
       id: 'default-carousel',
       override: true,
