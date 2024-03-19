@@ -15,7 +15,7 @@ export class HomeCarouselComponent {
   @ViewChild('carouselRef', { static: true }) carouselEl!: ElementRef<HTMLDivElement>
   @ViewChildren('carouselItem') carouselItems!: QueryList<ElementRef>;
 
-  carouselImage: any[] = [
+  carouselImage: string[] = [
     "../../../assets/img/uliveto.png",
     "../../../assets/img/uliveto2.jpeg", 
     "../../../assets/img/uliveto.png",
