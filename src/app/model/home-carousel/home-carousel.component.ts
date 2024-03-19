@@ -1,31 +1,34 @@
-import { Component, ElementRef, ViewChild } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core'
 import feather from 'feather-icons'
 import { Carousel } from 'flowbite'
 
 @Component({
   selector: 'app-home-carousel',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home-carousel.component.html',
   styleUrl: './home-carousel.component.scss',
 })
 export class HomeCarouselComponent {
   
   @ViewChild('carouselRef', { static: true }) carouselEl!: ElementRef<HTMLDivElement>
-  @ViewChild('itemZeroRef', { static: true }) item0El!: ElementRef<HTMLDivElement>
-  @ViewChild('itemOneRef', { static: true }) item1El!: ElementRef<HTMLDivElement>
-  @ViewChild('itemTwoRef', { static: true }) item2El!: ElementRef<HTMLDivElement>
-  @ViewChild('itemThreeRef', { static: true }) item3El!: ElementRef<HTMLDivElement>
-  @ViewChild('itemFourRef', { static: true }) item4El!: ElementRef<HTMLDivElement>
+  @ViewChildren('carouselItem') carouselItems!: QueryList<ElementRef>;
+
+  carouselImage: any[] = [
+    {URL: "../../../assets/img/uliveto.png", ref: "itemZeroRef"}, 
+    {URL: "../../../assets/img/uliveto2.jpeg", ref: "itemOneRef"}, 
+    {URL: "../../../assets/img/uliveto.png", ref: "itemTwoRef"},
+    {URL: "../../../assets/img/uliveto2.jpeg", ref: "itemThreeRef"}, 
+    {URL: "../../../assets/img/uliveto.png", ref: "itemFourRef"},
+  ]
 
   ngAfterViewInit(): void {
-    const items = [
-      { position: 0, el: this.item0El?.nativeElement },
-      { position: 1, el: this.item1El?.nativeElement },
-      { position: 2, el: this.item2El?.nativeElement },
-      { position: 3, el: this.item3El?.nativeElement }, 
-      { position: 4, el: this.item4El?.nativeElement }
-    ]
+    const items: any[] = []
+    this.carouselItems.forEach((item, index) => {
+      items.push({ position: index, el: item?.nativeElement})
+    })
+
     const options = {
       defaultPosition: 0,
       interval: 10000,

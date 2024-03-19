@@ -1,32 +1,9 @@
 <div #carouselRef id="default-carousel" class="relative carousel mt-20" data-carousel="static">
   <!-- Carousel wrapper -->
   <div class="relative overflow-hidden h-full">
-    <!-- Item 1 -->
-    <div #itemZeroRef class="hidden duration-700 ease-in-out img1 blur-[2px]" data-carousel-item>
-      <!-- <img src="../../../assets/img/uliveto.png"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
-    </div>
-    <!-- Item 2 -->
-    <div #itemOneRef class="hidden duration-700 ease-in-out img2 blur-[2px]" data-carousel-item>
-      <!-- <img src="../../../assets/img/uliveto2.jpeg"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
-    </div>
-    <!-- Item 3 -->
-    <div #itemTwoRef class="hidden duration-700 ease-in-out img1 blur-[2px]" data-carousel-item>
-      <!-- <img src="../../../assets/img/uliveto.png"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
-    </div>
-    <!-- Item 4 -->
-    <div #itemThreeRef class="hidden duration-700 ease-in-out img2 blur-[2px]" data-carousel-item>
-      <!-- <img src="../../../assets/img/uliveto2.jpeg"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
-    </div>
-    <!-- Item 5 -->
-    <div #itemFourRef class="hidden duration-700 ease-in-out img1 blur-[2px]" data-carousel-item>
-      <!-- <img src="../../../assets/img/uliveto.png"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
-    </div>
-
+    <ng-container *ngFor="let item of carouselImage">
+      <div #carouselItem class="hidden duration-700 ease-in-out img blur-[2px]" [style.background-image]="'url('+item.URL+')'"  data-carousel-item></div>
+    </ng-container>
   </div>
   <!-- photo overlay -->
   <div class="absolute top-0 z-30 bg-[#ffffff30] carousel w-full"></div>
@@ -53,7 +30,7 @@
     </div>
 
     <div class="flex justify-center items-center mb-28">
-      <p id="slogan" class="text-[#262626] bg-[#ffffff26] text-5xl text-center font-bold rounded-[50px] w-1/2 h-32 py-4">Lorem ipsum
+      <p id="slogan" class="text-[#262626] text-5xl text-center font-bold rounded-[50px] w-1/2 h-32 py-4 bg-[#ffffff50] bg-opacity-60">Lorem ipsum
         dolor sit amet, consectetur adipiscing elit.</p>
     </div>
 
